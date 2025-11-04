@@ -4,7 +4,7 @@ import { UserButton } from "@clerk/nextjs";
 
 function Navbar() {
   return (
-    <nav className="bg-muted flex items-center justify-between px-4 py-6 sm:px-16 lg:px-24">
+    <nav className="bg-muted/65 flex items-center justify-between px-4 py-12 sm:px-16">
       <div>
         <LinksDropdown />
       </div>

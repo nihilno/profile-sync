@@ -10,14 +10,16 @@ function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="bg-muted flex h-full flex-col px-8 py-6">
+    <aside className="bg-muted/65 flex h-full flex-col px-8 py-12">
       <Logo />
-      <div className="mt-20 flex flex-col gap-4 px-6">
+      <div className="mt-20 flex flex-col gap-6 px-6">
         {links.map((link) => (
           <Button
             key={link.label}
             asChild
             variant={pathname === link.href ? "default" : "link"}
+            size="lg"
+            className="text-lg"
           >
             <Link href={link.href} className="flex items-center gap-2">
               {link.icon}
