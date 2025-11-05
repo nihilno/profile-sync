@@ -170,7 +170,12 @@ export async function getStatsAction(): Promise<{
     });
 
     const statsObject = Object.fromEntries(
-      (await stats).map((item) => [item.status, item._count.status]),
+      (await stats).map(
+        (item: { status: string; _count: { status: number } }) => [
+          item.status,
+          item._count.status,
+        ],
+      ),
     );
 
     const defaultStats = {
