@@ -50,9 +50,7 @@ function Logo() {
             </circle>
           </svg>
         </div>
-        <span className="bg-white bg-clip-text text-2xl font-bold text-transparent">
-          ProfileSync
-        </span>
+        <span className="text-2xl font-bold text-white">ProfileSync</span>
       </div>
     </Link>
   );

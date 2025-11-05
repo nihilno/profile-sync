@@ -43,7 +43,7 @@ export async function getAllJobsAction({
   page: number;
   totalPages: number;
 }> {
-  const userId = getUser();
+  const userId = await getUser();
 
   try {
     let whereClause: any = {
