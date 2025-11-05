@@ -1,4 +1,4 @@
-import { StatsLoadingCard } from "@/components/ui/Skeletons";
+import { StatsLoadingCard } from "@/components/global/Skeletons";
 
 function loading() {
   return (

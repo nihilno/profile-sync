@@ -1,6 +1,6 @@
 "use client";
 
-import Spinner from "@/components/ui/Spinner";
+import Spinner from "@/components/global/Spinner";
 import { getChartsAction } from "@/lib/actions";
 import { useQuery } from "@tanstack/react-query";
 import {

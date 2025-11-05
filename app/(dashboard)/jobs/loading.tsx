@@ -1,7 +1,7 @@
 import {
   JobListLoadingCard,
   SearchFormLoadingCard,
-} from "@/components/ui/Skeletons";
+} from "@/components/global/Skeletons";
 
 function loading() {
   return (

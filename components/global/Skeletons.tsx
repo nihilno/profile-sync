@@ -1,5 +1,5 @@
-import { Card } from "./card";
-import { Skeleton } from "./skeleton";
+import { Card } from "../ui/card";
+import { Skeleton } from "../ui/skeleton";
 
 export function SearchFormLoadingCard() {
   return (

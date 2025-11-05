@@ -1,6 +1,6 @@
 import Navbar from "@/components/dashboard/Navbar";
 import Sidebar from "@/components/dashboard/Sidebar";
-import SineWaveCanvas from "@/components/ui/SinewaveCanvas";
+import SineWaveCanvas from "@/components/global/SinewaveCanvas";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
