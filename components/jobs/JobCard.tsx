@@ -24,7 +24,7 @@ function JobCard({ job }: { job: JobType }) {
   const date = new Date(job.createdAt).toLocaleDateString();
 
   return (
-    <Card className="bg-muted">
+    <Card className="bg-muted/85">
       <CardHeader>
         <CardTitle>{job.position}</CardTitle>
         <CardDescription>{job.company}</CardDescription>
@@ -34,7 +34,7 @@ function JobCard({ job }: { job: JobType }) {
         <JobInfo icon={<BriefcaseBusiness />} text={job.mode} />
         <JobInfo icon={<MapPin />} text={job.location} />
         <JobInfo icon={<CalendarDays />} text={date} />
-        <Badge className="h-8 w-32 cursor-default dark:shadow-[0_1px_8px_var(--color-primary)] dark:hover:shadow-[0_2px_32px_var(--color-primary)]">
+        <Badge className="h-8 w-32 cursor-default shadow-[0_1px_8px_var(--color-primary)] hover:shadow-[0_2px_32px_var(--color-primary)]">
           <JobInfo
             icon={<MessageSquare className="h-4 w-4" />}
             text={job.status}

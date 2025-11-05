@@ -43,45 +43,11 @@
 
 :root {
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: #1db954;
-  --primary-foreground: oklch(0.969 0.015 12.422);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(94.912% 0.00011 271.152);
-  --accent-foreground: oklch(0.21 0.006 285.885);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: #34be65;
-  --chart-1: #76db99;
-  --chart-2: #34be65;
-  --chart-3: #1db954;
-  --chart-4: #178b40;
-  --chart-5: #105729;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-primary: #1db954;
-  --sidebar-primary-foreground: oklch(0.969 0.015 12.422);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: #34be65;
-}
-
-.dark {
   --background: #212121;
   --foreground: #e0e0e0;
   --card: oklch(22.653% 0.03282 283.469);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.21 0.006 285.885);
+  --popover: oklch(23.201% 0.00574 285.885);
   --popover-foreground: oklch(0.985 0 0);
   --primary: #1db954;
   --primary-foreground: oklch(0.969 0.015 12.422);
@@ -123,6 +89,39 @@
   html {
     scrollbar-gutter: stable both-edges;
     scroll-behavior: smooth;
+  }
+
+  .glass-card {
+    @apply border-primary/20 rounded-2xl border bg-white/5 p-2 shadow-2xl backdrop-blur-xl transition-all duration-500;
+    background: radial-gradient(
+      circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(0, 255, 157, 0.12),
+      transparent 60%
+    );
+    animation: float 6s ease-in-out infinite;
+  }
+  .glass-card:hover {
+    @apply border-primary/60 shadow-primary/30 -translate-y-2;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-16px);
+    }
+  }
+
+  /* Mouse glow */
+  .glass-card {
+    cursor: pointer;
+  }
+
+  [data-sonner-toast] {
+    background-color: #1db954 !important;
+    border: 1px solid #1db954 !important;
   }
 
   @keyframes wiggle {

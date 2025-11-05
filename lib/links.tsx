@@ -1,4 +1,12 @@
-import { ChartSpline, FilePlusCorner, Files } from "lucide-react";
+import {
+  ArrowLeftRight,
+  BarChart3,
+  Briefcase,
+  ChartSpline,
+  FilePlusCorner,
+  Files,
+  Target,
+} from "lucide-react";
 
 type NavLink = {
   href: string;
@@ -21,5 +29,23 @@ export const links: NavLink[] = [
     label: "Stats",
     href: "/stats",
     icon: <ChartSpline />,
+  },
+];
+
+export const cards = [
+  {
+    Icon: Briefcase,
+    title: "8-Second Add",
+    desc: "Position → Company → Location. Done.",
+  },
+  {
+    Icon: ArrowLeftRight,
+    title: "Switch Status",
+    desc: "Pending / Interview / Declined.",
+  },
+  {
+    Icon: BarChart3,
+    title: "Live Streak",
+    desc: "Monthly chart updates as you add more jobs.",
   },
 ];

@@ -10,15 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground hover:bg-primary/90 dark:shadow-[0_1px_8px_var(--color-primary)] hover:shadow-[0_2px_4px_var(--color-primary)] dark:hover:shadow-[0_2px_32px_var(--color-primary)]",
+          "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_1px_8px_var(--color-primary)] hover:shadow-[0_2px_4px_var(--color-primary)] hover:shadow-[0_2px_32px_var(--color-primary)]",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
-          " bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-muted dark:hover:bg-input/50",
+          " bg-popover shadow-xs hover:bg-primary/25 hover:text-accent-foreground hover:shadow-[0_1px_4px_var(--color-primary)] dark:bg-muted dark:hover:bg-input/50",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
+          "hover:text-accent-foreground dark:hover:bg-accent/50 hover:shadow-[0_1px_4px_var(--color-primary)]",
         link: "text-primary underline-offset-4 hover:bg-background",
         accent: "bg-primary hover:bg-chart-4",
       },

@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { JobStatus } from "@/lib/types";
+import { Search, X } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 function SearchForm() {
@@ -35,15 +36,23 @@ function SearchForm() {
 
   return (
     <form
-      className="bg-muted grid gap-6 rounded-lg p-8 sm:grid-cols-2 md:grid-cols-3"
+      className="bg-muted/85 grid gap-6 rounded-lg p-8 sm:grid-cols-2 md:grid-cols-3"
       onSubmit={handleSubmit}
     >
-      <Input
-        type="text"
-        placeholder="Serach Jobs"
-        name="search"
-        defaultValue={search}
-      />
+      <div className="relative w-full">
+        <Input
+          type="text"
+          placeholder="Search Jobs"
+          name="search"
+          defaultValue={search}
+          className="pl-10"
+        />
+        <Search
+          className="pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-gray-400"
+          strokeWidth={2}
+        />
+      </div>
+
       <Select name="jobStatus" defaultValue={jobStatus}>
         <SelectTrigger className="w-full">
           <SelectValue placeholder="All" />

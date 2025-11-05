@@ -17,7 +17,7 @@ function Sidebar() {
           <Button
             key={link.label}
             asChild
-            variant={pathname === link.href ? "default" : "link"}
+            variant={pathname === link.href ? "default" : "ghost"}
             size="lg"
             className="text-lg"
           >

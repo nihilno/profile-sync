@@ -1,28 +1,43 @@
 import { Button } from "@/components/ui/button";
-import LandingImg from "@/public/assets/main.svg";
-import Image from "next/image";
+import { cards } from "@/lib/links";
 import Link from "next/link";
 
-function Hero() {
+export default function Hero() {
   return (
-    <div className="mx-auto -mt-10 grid w-full flex-1 items-center justify-between px-4 sm:px-8 lg:grid-cols-[1fr_400px]">
-      <div className="space-y-4">
-        <h1 className="text-4xl font-bold capitalize md:text-[68px]">
-          job <span className="text-primary">tracking</span> app
-        </h1>
-        <p className="mt-4 max-w-md leading-loose">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-          voluptate animi inventore nostrum amet quas maxime esse sed tempore
-          laborum placeat debitis soluta quos, omnis, magni similique blanditiis
-          officiis adipisci.
-        </p>
-        <Button asChild className="mt-4" size="xl">
-          <Link href="/add-job">Get Started</Link>
-        </Button>
+    <div className="relative -mt-10 flex flex-1 flex-col items-center justify-center">
+      <div className="relative z-10 w-full max-w-7xl">
+        <div className="space-y-6 text-center lg:text-left">
+          <h1 className="text-5xl font-black tracking-tighter md:text-7xl">
+            jobs <span className="text-primary">tracking</span> app
+          </h1>
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed lg:mx-0">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+            quibusdam maiores corporis! Laudantium tenetur quibusdam deserunt
+            ullam perspiciatis suscipit mollitia.
+          </p>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+            <Button variant="outline" size="xl">
+              <Link href="/add-job">See Demo →</Link>
+            </Button>
+          </div>
+        </div>
+
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
+          {cards.map(({ Icon, title, desc }, i) => (
+            <div
+              key={i}
+              className="glass-card group"
+              style={{ animationDelay: `${i * 0.2}s` }}
+            >
+              <div className="p-6 text-center">
+                <Icon className="text-primary mx-auto mb-4 h-12 w-12 transition group-hover:scale-110" />
+                <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
+                <p className="text-sm">{desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <Image src={LandingImg} alt="landing" className="hidden lg:block" />
     </div>
   );
 }
-
-export default Hero;

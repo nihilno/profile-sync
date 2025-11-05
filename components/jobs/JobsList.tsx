@@ -30,7 +30,12 @@ function JobsList() {
         <Spinner />
       </div>
     );
-  if (jobs.length < 1) return <h2 className="text-xl">No Jobs found.</h2>;
+  if (jobs.length < 1)
+    return (
+      <div className="absolute left-1/2 min-h-dvh -translate-x-1/2 translate-y-1/4">
+        <h2 className="text-2xl">No Jobs found.</h2>
+      </div>
+    );
 
   return (
     <>
@@ -48,16 +53,18 @@ function JobsList() {
           <JobCard key={job.id} job={job} />
         ))}
       </div>
-      <div className="relative mt-10 flex w-full items-center">
-        <span className="absolute">
-          {page} / {totalPages}
-        </span>
-        <div className="ml-auto">
-          {totalPages < 2 ? null : (
-            <Pagination currentPage={page} totalPages={totalPages} />
-          )}
+      {jobs.length > 3 && (
+        <div className="relative mt-10 flex w-full items-center">
+          <span className="absolute">
+            {page} / {totalPages}
+          </span>
+          <div className="ml-auto">
+            {totalPages < 2 ? null : (
+              <Pagination currentPage={page} totalPages={totalPages} />
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

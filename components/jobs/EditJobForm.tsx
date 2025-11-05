@@ -84,7 +84,7 @@ function EditJobForm({ id }: { id: string }) {
           <Button
             type="submit"
             disabled={!isDirty || isPending}
-            className="flex items-center gap-2 self-end capitalize"
+            className="flex h-10 items-center gap-2 self-end capitalize"
           >
             <>
               {isPending && <Loader className="animate-spin" />}

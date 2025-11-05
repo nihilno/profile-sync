@@ -52,7 +52,7 @@ function CreateJobForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="bg-muted mx-auto w-2/3 rounded-lg px-12 pt-12 pb-24"
+        className="bg-muted/85 mx-auto w-2/3 rounded-lg px-12 pt-12 pb-24"
       >
         <h2 className="mb-12 text-4xl font-semibold capitalize">Add job</h2>
         <div className="grid items-start gap-x-6 gap-y-6 md:grid-cols-2 lg:grid-cols-3">
@@ -77,7 +77,7 @@ function CreateJobForm() {
           <Button
             type="submit"
             disabled={isPending}
-            className="flex items-center gap-2 self-end capitalize"
+            className="flex h-10 items-center gap-2 self-end capitalize"
           >
             <>
               {isPending && <Loader className="animate-spin" />}
