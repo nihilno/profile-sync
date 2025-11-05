@@ -24,7 +24,7 @@ function JobCard({ job }: { job: JobType }) {
   const date = new Date(job.createdAt).toLocaleDateString();
 
   return (
-    <Card className="bg-muted/85">
+    <Card>
       <CardHeader>
         <CardTitle>{job.position}</CardTitle>
         <CardDescription>{job.company}</CardDescription>

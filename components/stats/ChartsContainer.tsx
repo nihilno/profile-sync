@@ -23,7 +23,12 @@ function ChartsContainer() {
   });
 
   if (isPending) return <Spinner />;
-  if (!data || data.length < 1) return null;
+  if (!data || data.length < 1)
+    return (
+      <div className="absolute left-1/2 min-h-dvh -translate-x-1/2 translate-y-1/4">
+        <h2 className="text-2xl">Create more jobs to see the Chart.</h2>
+      </div>
+    );
 
   return (
     <section className="mt-32">

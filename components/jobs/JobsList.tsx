@@ -41,7 +41,7 @@ function JobsList() {
     <>
       <div className="my-8 flex items-center justify-between">
         <h2 className="text-2xl font-semibold capitalize">
-          {count} jobs found
+          {count} job{count !== 1 ? "s" : ""} found
         </h2>
         {totalPages < 2 ? null : (
           <Pagination currentPage={page} totalPages={totalPages} />

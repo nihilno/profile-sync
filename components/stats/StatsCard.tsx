@@ -8,7 +8,7 @@ import CountUp from "react-countup";
 
 function StatsCard({ title, value }: { title: string; value: number }) {
   return (
-    <Card className="bg-muted/85">
+    <Card>
       <CardHeader className="flex items-center justify-between">
         <CardTitle className="text-2xl capitalize">{title}</CardTitle>
         <CardDescription className="text-primary mt-[0px!important] text-4xl font-extrabold">
