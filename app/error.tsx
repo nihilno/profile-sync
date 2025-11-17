@@ -1,4 +1,3 @@
-// app/error.tsx
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -24,7 +23,7 @@ export default function Error({
         </p>
         <p className="mx-auto mt-3 max-w-lg opacity-75">
           {error.message ||
-            "The app hiccuped. Don’t worry — your jobs are safe."}
+            "The app hiccuped. Don't worry — your jobs are safe."}
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
